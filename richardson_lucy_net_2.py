@@ -11,26 +11,26 @@ class RLN_2(nn.Module):
         super(RLN_2, self).__init__()
 
         # h2 branch
-        self.h2_conv1 = torch.nn.Conv3d(in_channels=2, out_channels=4, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
-        self.h2_bn1 = torch.nn.BatchNorm3d(4)
-        self.h2_conv2 = torch.nn.Conv3d(in_channels=4, out_channels=4, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
-        self.h2_bn2 = torch.nn.BatchNorm3d(4)
+        self.h2_conv1 = torch.nn.Conv3d(in_channels=2, out_channels=8, kernel_size=5, stride=[1,1,1], padding='same')
+        self.h2_bn1 = torch.nn.BatchNorm3d(8)
+        self.h2_conv2 = torch.nn.Conv3d(in_channels=8, out_channels=8, kernel_size=5, stride=[1,1,1], padding='same')
+        self.h2_bn2 = torch.nn.BatchNorm3d(8)
         
         self.h2_bnA = torch.nn.BatchNorm3d(2)
 
-        self.h2_conv3 = torch.nn.Conv3d(in_channels=2, out_channels=8, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
-        self.h2_bn3 = torch.nn.BatchNorm3d(8)
-        self.h2_conv4 = torch.nn.Conv3d(in_channels=8, out_channels=8, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
-        self.h2_bn4 = torch.nn.BatchNorm3d(8)
+        self.h2_conv3 = torch.nn.Conv3d(in_channels=2, out_channels=16, kernel_size=5, stride=[1,1,1], padding='same')
+        self.h2_bn3 = torch.nn.BatchNorm3d(16)
+        self.h2_conv4 = torch.nn.Conv3d(in_channels=16, out_channels=16, kernel_size=5, stride=[1,1,1], padding='same')
+        self.h2_bn4 = torch.nn.BatchNorm3d(16)
 
         self.h2_bnB = torch.nn.BatchNorm3d(1)
 
 
         # h3 branch
-        self.h3_conv1 = torch.nn.Conv3d(in_channels=1, out_channels=8, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
-        self.h3_conv2 = torch.nn.Conv3d(in_channels=9, out_channels=8, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
-        self.h3_conv3 = torch.nn.Conv3d(in_channels=16, out_channels=8, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
-        self.h3_bnA = torch.nn.BatchNorm3d(8)
+        self.h3_conv1 = torch.nn.Conv3d(in_channels=1, out_channels=16, kernel_size=5, stride=[1,1,1], padding='same')
+        self.h3_conv2 = torch.nn.Conv3d(in_channels=17, out_channels=16, kernel_size=5, stride=[1,1,1], padding='same')
+        self.h3_conv3 = torch.nn.Conv3d(in_channels=32, out_channels=16, kernel_size=5, stride=[1,1,1], padding='same')
+        self.h3_bnA = torch.nn.BatchNorm3d(16)
 
 
 
