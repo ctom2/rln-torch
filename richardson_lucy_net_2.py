@@ -28,7 +28,7 @@ class RLN_2(nn.Module):
 
         # h3 branch
         self.h3_conv1 = torch.nn.Conv3d(in_channels=1, out_channels=8, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
-        self.h3_conv2 = torch.nn.Conv3d(in_channels=10, out_channels=8, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
+        self.h3_conv2 = torch.nn.Conv3d(in_channels=9, out_channels=8, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
         self.h3_conv3 = torch.nn.Conv3d(in_channels=16, out_channels=8, kernel_size=[3,3,3], stride=[1,1,1], padding='same')
         self.h3_bnA = torch.nn.BatchNorm3d(8)
 
